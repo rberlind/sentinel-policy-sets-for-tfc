@@ -1,4 +1,4 @@
-workflow "Sentinel" {
+workflow "sentinel" {
   resolves = ["sentinel-test"]
   on = "pull_request"
 }
