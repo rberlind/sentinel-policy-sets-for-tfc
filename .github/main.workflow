@@ -1,5 +1,5 @@
 workflow "sentinel" {
-  resolves = ["sentinel-test", "sentinel-test-azure", "sentinel-test-gcp", "sentinel-test-vmware"]
+  resolves = ["sentinel-test-aws", "sentinel-test-azure", "sentinel-test-gcp", "sentinel-test-vmware"]
   on = "pull_request"
 }
 
