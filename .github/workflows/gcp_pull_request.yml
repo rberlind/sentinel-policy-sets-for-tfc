@@ -16,6 +16,7 @@ jobs:
       # This step runs `sentinel test` against the GCP policies
       - name: sentinel-test-gcp
         uses: rberlind/sentinel-github-actions/test@master
+        with:
+          working_directory: './sentinel-policy-sets/gcp'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          STL_ACTION_WORKING_DIR: ./sentinel-policy-sets/gcp
