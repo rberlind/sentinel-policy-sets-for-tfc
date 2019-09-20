@@ -1,0 +1,21 @@
+name: sentinel-test-gcp
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'sentinel-policy-sets/gcp/**'
+
+jobs:
+  sentinel-test-gcp:
+    runs-on: ubuntu-latest
+    steps:
+      # This step checks out the repository's code
+      - name: checkout-code
+        uses: actions/checkout@v1
+      # This step runs `sentinel test` against the GCP policies
+      - name: sentinel-test-gcp
+        uses: rberlind/sentinel-github-actions/test@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STL_ACTION_WORKING_DIR: ./sentinel-policy-sets/gcp
