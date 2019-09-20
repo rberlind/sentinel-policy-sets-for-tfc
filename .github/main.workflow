@@ -1,5 +1,5 @@
 workflow "Sentinel" {
-  resolves = ["sentinel-test", "terraform-fmt"]
+  resolves = ["sentinel-test"]
   on = "pull_request"
 }
 
