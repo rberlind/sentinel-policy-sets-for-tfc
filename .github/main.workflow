@@ -10,12 +10,3 @@ action "sentinel-test" {
     STL_ACTION_WORKING_DIR = "."
   }
 }
-
-
-action "terraform-fmt" {
-  uses = "hashicorp/terraform-github-actions/fmt@v0.1"
-  secrets = ["GITHUB_TOKEN"]
-  env = {
-    TF_ACTION_WORKING_DIR = "."
-  }
-}
