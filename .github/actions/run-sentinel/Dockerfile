@@ -12,6 +12,5 @@ LABEL "maintainer"="Roger Berlind"
 RUN apk --no-cache add jq curl
 
 COPY entrypoint.sh /entrypoint.sh
-#COPY sentinel-policy-sets/ /github/workspace/sentinel-policy-sets/
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["."]

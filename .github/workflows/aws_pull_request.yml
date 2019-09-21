@@ -1,22 +1,22 @@
-name: sentinel-test-gcp
+name: sentinel-test-aws
 on:
   pull_request:
     branches:
       - master
     paths:
-      - 'sentinel-policy-sets/gcp/**'
+      - 'sentinel-policy-sets/aws/**'
 
 jobs:
-  sentinel-test-gcp:
+  sentinel-test-aws:
     runs-on: ubuntu-latest
     steps:
       # This step checks out the repository's code
       - uses: actions/checkout@v1
-      # This step runs `sentinel test` against the GCP policies
-      - name: sentinel-test-gcp
+      # This step runs `sentinel test` against the AWS policies
+      - name: sentinel-test-aws
         uses: ./.github/actions/run-sentinel
         #uses: rberlind/sentinel-policy-sets-for-tfc@master
         with:
-          args: ./sentinel-policy-sets/gcp
+          args: ./sentinel-policy-sets/aws
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
