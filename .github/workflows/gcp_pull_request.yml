@@ -15,7 +15,6 @@ jobs:
       # This step runs `sentinel test` against the GCP policies
       - name: sentinel-test-gcp
         uses: ./.github/actions/run-sentinel
-        #uses: rberlind/sentinel-policy-sets-for-tfc@master
         with:
           args: ./sentinel-policy-sets/gcp
         env:

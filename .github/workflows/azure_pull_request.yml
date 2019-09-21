@@ -15,7 +15,6 @@ jobs:
       # This step runs `sentinel test` against the Azure policies
       - name: sentinel-test-azure
         uses: ./.github/actions/run-sentinel
-        #uses: rberlind/sentinel-policy-sets-for-tfc@master
         with:
           args: ./sentinel-policy-sets/azure
         env:

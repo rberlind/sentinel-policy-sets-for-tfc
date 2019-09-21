@@ -15,7 +15,6 @@ jobs:
       # This step runs `sentinel test` against the AWS policies
       - name: sentinel-test-aws
         uses: ./.github/actions/run-sentinel
-        #uses: rberlind/sentinel-policy-sets-for-tfc@master
         with:
           args: ./sentinel-policy-sets/aws
         env:
