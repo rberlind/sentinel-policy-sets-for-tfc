@@ -13,11 +13,13 @@ jobs:
       # This step checks out the repository's code
       - name: checkout-code
         uses: actions/checkout@master
+        with:
+          path: github/workspace
       # This step runs `sentinel test` against the GCP policies
       - name: sentinel-test-gcp
         uses: rberlind/sentinel-policy-sets-for-tfc@master
         with:
-          args: /github/workspace/sentinel-policy-sets/gcp
+          args: ./sentinel-policy-sets/gcp
         env:
-          STL_ACTION_WORKING_DIR: '/github/workspace/sentinel-policy-sets/gcp'
+          STL_ACTION_WORKING_DIR: './sentinel-policy-sets/gcp'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
