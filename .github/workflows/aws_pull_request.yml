@@ -1,9 +1,10 @@
 name: sentinel-test-aws
-on: pull_request
-  branches:
-    - master
-  paths:
-    - 'aws/**'
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'aws/**'
 
 jobs:
   sentinel-test-aws:
