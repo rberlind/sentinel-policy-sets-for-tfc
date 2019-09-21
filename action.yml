@@ -1,0 +1,11 @@
+# action.yml
+name: 'Sentinel Test'
+description: 'Test Sentinel policies with the Sentinel Simulator'
+inputs:
+  working_directory:
+    description: 'directory containing Sentinel policies'
+    required: true
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
