@@ -1,13 +1,13 @@
 #!/bin/sh
 echo "pwd: $(pwd)"
-echo "ls: $(ls /github/workspace)"
+echo "ls: $(ls)"
 echo "env: $(env)"
 echo "STL_ACTION_WORKING_DIR: $STL_ACTION_WORKING_DIR"
 echo "Working Directory: $1"
 
 set -e
-#cd "$1"
-#echo "pwd after cd: $(pwd)"
+cd "$1"
+echo "pwd after cd: $(pwd)"
 
 set +e
 OUTPUT=$(sh -c "sentinel test -verbose" 2>&1)
