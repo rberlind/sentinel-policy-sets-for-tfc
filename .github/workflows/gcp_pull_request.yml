@@ -16,7 +16,7 @@ jobs:
       - name: sentinel-test-gcp
         uses: rberlind/sentinel-policy-sets-for-tfc@master
         with:
-          working_directory: /github/workspace/sentinel-policy-sets/gcp
+          working_directory: '/github/workspace/sentinel-policy-sets/gcp'
         with:
           args: /github/workspace/sentinel-policy-sets/gcp
         env:
