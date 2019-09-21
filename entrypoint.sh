@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "pwd: $(pwd)"
-echo "ls: $(ls)"
+echo "ls: $(ls /github/workspace/sentinel-policy-sets)"
 echo "env: $(env)"
 echo "STL_ACTION_WORKING_DIR: $STL_ACTION_WORKING_DIR"
 echo "Working Directory: $1"
