@@ -1,10 +1,5 @@
 name: sentinel-test-aws
-on: pull_request
-  branches:
-    - master
-  paths:
-    - 'aws/**'
-on: push
+on: [push, pull_request]
   branches:
     - master
   paths:
