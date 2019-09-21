@@ -31,7 +31,6 @@ _modules = {
 							"hostname":            null,
 							"labels": {
 								"owner": "roger",
-								"ttl":   "24",
 							},
 							"machine_type":            "n1-standard-2",
 							"metadata":                null,
