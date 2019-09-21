@@ -17,6 +17,6 @@ jobs:
       - name: sentinel-test-gcp
         uses: rberlind/sentinel-github-actions/test@master
         with:
-          args: ./sentinel-policy-sets/gcp
+          args: './sentinel-policy-sets/gcp'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
