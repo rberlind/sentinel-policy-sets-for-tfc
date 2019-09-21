@@ -4,7 +4,7 @@ set -e
 cd "$1"
 
 set +e
-OUTPUT=$(sh -c "sentinel test -verbose" 2>&1)
+OUTPUT=$(sh -c "sentinel test" 2>&1)
 SUCCESS=$?
 echo "$OUTPUT"
 set -e
