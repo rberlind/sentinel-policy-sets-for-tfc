@@ -7,7 +7,7 @@ echo "Working Directory: $1"
 
 set -e
 #cd "$1"
-cd "$INPUT_WORKING_DIRECTORY"
+cd "$1"
 echo "pwd after cd: $(pwd)"
 
 set +e
