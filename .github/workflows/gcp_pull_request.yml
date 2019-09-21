@@ -19,4 +19,5 @@ jobs:
         with:
           args: './sentinel-policy-sets/gcp'
         env:
+          STL_ACTION_WORKING_DIR: './sentinel-policy-sets/gcp'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
