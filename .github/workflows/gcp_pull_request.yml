@@ -12,8 +12,8 @@ jobs:
     steps:
       # This step checks out the repository's code
       - uses: actions/checkout@master
-        with:
-          path: github/workspace
+        #with:
+          #path: github/workspace
       # This step runs `sentinel test` against the GCP policies
       - name: sentinel-test-gcp
         uses: rberlind/sentinel-policy-sets-for-tfc@master
