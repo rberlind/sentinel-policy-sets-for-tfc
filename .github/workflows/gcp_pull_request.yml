@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # This step checks out the repository's code
-      - name: checkout-code
-        uses: actions/checkout@master
+      - uses: actions/checkout@master
         with:
           path: github/workspace
       # This step runs `sentinel test` against the GCP policies
