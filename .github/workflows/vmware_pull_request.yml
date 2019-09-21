@@ -4,7 +4,7 @@ on:
     branches:
       - master
     paths:
-      - 'sentinel-policy-sets/vmware/**'
+      - 'vmware/**'
 
 jobs:
   sentinel-test-vmware:
@@ -14,9 +14,8 @@ jobs:
       - uses: actions/checkout@v1
       # This step runs `sentinel test` against the VMware policies
       - name: sentinel-test-vmware
-        #uses: ./.github/actions/run-sentinel
         uses: rberlind/sentinel-policy-sets-for-tfc/.github/actions/run-sentinel@master
         with:
-          args: ./sentinel-policy-sets/vmware
+          args: ./vmware
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

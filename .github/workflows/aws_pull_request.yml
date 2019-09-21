@@ -4,7 +4,7 @@ on:
     branches:
       - master
     paths:
-      - 'sentinel-policy-sets/aws/**'
+      - 'aws/**'
 
 jobs:
   sentinel-test-aws:
@@ -14,9 +14,8 @@ jobs:
       - uses: actions/checkout@v1
       # This step runs `sentinel test` against the AWS policies
       - name: sentinel-test-aws
-        #uses: ./.github/actions/run-sentinel
         uses: rberlind/sentinel-policy-sets-for-tfc/.github/actions/run-sentinel@master
         with:
-          args: ./sentinel-policy-sets/aws
+          args: ./aws
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -4,7 +4,7 @@ on:
     branches:
       - master
     paths:
-      - 'sentinel-policy-sets/azure/**'
+      - 'azure/**'
 
 jobs:
   sentinel-test-azure:
@@ -14,9 +14,8 @@ jobs:
       - uses: actions/checkout@v1
       # This step runs `sentinel test` against the Azure policies
       - name: sentinel-test-azure
-        #uses: ./.github/actions/run-sentinel
         uses: rberlind/sentinel-policy-sets-for-tfc/.github/actions/run-sentinel@master
         with:
-          args: ./sentinel-policy-sets/azure
+          args: ./azure
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
