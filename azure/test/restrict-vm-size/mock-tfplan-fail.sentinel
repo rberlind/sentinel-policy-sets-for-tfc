@@ -274,7 +274,7 @@ _modules = {
 							"tags": {
 								"name": "azure-vm-demo",
 							},
-							"vm_size": "Basic_A0",
+							"vm_size": "Standard_D4_v2",
 							"zones":   null,
 						},
 						"destroy": false,
@@ -446,7 +446,7 @@ _modules = {
 							},
 							"vm_size": {
 								"computed": false,
-								"new":      "Basic_A0",
+								"new":      "Standard_D4_v2",
 								"old":      "",
 							},
 							"zones": {
@@ -506,7 +506,7 @@ _modules = {
 							"tags": {
 								"environment": "staging",
 							},
-							"vm_size": "Basic_A0",
+							"vm_size": "Standard_D4_v2",
 							"zones":   null,
 						},
 						"destroy": false,
@@ -678,7 +678,7 @@ _modules = {
 							},
 							"vm_size": {
 								"computed": false,
-								"new":      "Basic_A0",
+								"new":      "Standard_D4_v2",
 								"old":      "",
 							},
 							"zones": {
@@ -771,7 +771,7 @@ terraform_version = "0.12.3"
 
 variables = {
 	"prefix":  "roger-azurevmdemo",
-	"vm_size": "Basic_A0",
+	"vm_size": "Standard_D4_v2",
 }
 
 module = func(path) {
